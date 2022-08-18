@@ -446,36 +446,61 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var navbar = _react2.default.createElement(
-    "nav",
-    null,
-    _react2.default.createElement(
-        "h1",
-        null,
-        "Bob's Bistro"
-    ),
-    _react2.default.createElement(
-        "ul",
-        null,
-        _react2.default.createElement(
-            "li",
-            null,
-            "Menu"
-        ),
-        _react2.default.createElement(
-            "li",
-            null,
-            "About"
-        ),
-        _react2.default.createElement(
-            "li",
-            null,
-            "Contact"
-        )
-    )
-);
+/**
+Mini Challenge:
+Move the `header` element from Page into 
+its own component called "Header"
+*/
 
-_reactDom2.default.render(navbar, document.getElementById("root"));
+function Header() {
+    return _react2.default.createElement(
+        "header",
+        null,
+        _react2.default.createElement(
+            "nav",
+            null,
+            _react2.default.createElement("img", { src: "./react-logo.png", width: "40px" })
+        )
+    );
+}
+
+function Page() {
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(Header, null),
+        _react2.default.createElement(
+            "h1",
+            null,
+            "Reasons I'm excited to learn React"
+        ),
+        _react2.default.createElement(
+            "ol",
+            null,
+            _react2.default.createElement(
+                "li",
+                null,
+                "It's a popular library, so I'll be able to fit in with the cool kids!"
+            ),
+            _react2.default.createElement(
+                "li",
+                null,
+                "I'm more likely to get a job as a developer if I know React"
+            )
+        ),
+        _react2.default.createElement(
+            "footer",
+            null,
+            _react2.default.createElement(
+                "small",
+                null,
+                "\xA9 2021 Ziroll development. All rights reserved."
+            )
+        )
+    );
+}
+
+_reactDom2.default.render(_react2.default.createElement(Page, null), document.getElementById("root"));
 
 /***/ }),
 /* 6 */
