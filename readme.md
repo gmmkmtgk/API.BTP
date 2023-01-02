@@ -1,3 +1,3 @@
-Run By the command
+#Run By the command
 uvicorn main:app --reload
 
